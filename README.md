@@ -1,6 +1,6 @@
 # About
 
-When using `DependencyTrack` to find nugets with critical CVE in a `.net C#` application, there is no way to track down the inclusion path of the nuget introducing the vulnerability.
+When using `DependencyTrack` or similar tools to find nugets with critical CVE in a `.net C#` application, there is no way to track down the inclusion path of the nuget introducing the vulnerability.
 After several hours of internet research without success I decided to write this.
 
 # Prerequisite
@@ -11,7 +11,7 @@ After several hours of internet research without success I decided to write this
 
 # How does it work
 
-It calls `nuget-deps-tree` stores the resulting dependency tree. Then it finds the given nuget dependencies. To do so it traverses the dependencies and logs the up-path to shell, when the desired nuget was found.
+It calls `nuget-deps-tree` stores the resulting dependency tree. Then it finds the given nuget dependencies. To do so it traverses the dependencies and logs the path to shell, when the desired nuget was found.
 
 # Runit
 
