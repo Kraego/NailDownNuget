@@ -18,6 +18,7 @@ function Find-Nuget
     if($currentElementName.Equals($nugetName) -and $currentElementVersion.Equals($nugetVersion))
     {
         Write-Host "`n * Found: $($path)`n"
+        return
     }
 
     if ($dependencies.Count -eq 0)
