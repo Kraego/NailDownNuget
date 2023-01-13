@@ -1,7 +1,8 @@
 # About
 
-When using `DependencyTrack` or similar tools to find nugets with critical CVE in a `.net C#` application, there is no way to track down the inclusion path of the nuget introducing the vulnerability.
-After several hours of internet research without success I decided to write this.
+If you are `DependencyTrack` or a similar tools to find nugets with critical CVE in a `.net C#` application, there is no automatic way (in VS or nuget) to track down the inclusion path of the nuget introducing the vulnerability.
+
+After several hours of internet research without success I decided to write this. A powershell script + the same implementation in `python` as platform agonistic approach.
 
 # Prerequisite
 
@@ -11,10 +12,17 @@ After several hours of internet research without success I decided to write this
 
 # How does it work
 
-It calls `nuget-deps-tree` stores the resulting dependency tree. Then it finds the given nuget dependencies. To do so it traverses the dependencies and logs the path to shell, when the desired nuget was found.
+It calls `nuget-deps-tree` stores the resulting dependency tree. Then it tries to find the given nuget in the tree. To do so it traverses the dependencies and logs the path to shell, when the desired nuget was found.
 
 # Runit
 
 * (There must be a `dotnet build` or at least a `dotnet restore` to update the local nuget caches)
+
+## powershell
+
 * Don't forget to unblock the `nailDownNuget.ps1`
 * Run it in powershell `nailDownNuget.ps1 [path to sln] [name of the nuget] [version of the nuget]`
+
+## python
+
+* `py .\nailDonwNuget.py [path to sln], [name of the nuget], [version of the nuget]`
