@@ -1,8 +1,10 @@
 # About
 
-If you are `DependencyTrack` or a similar tools to find nugets with critical CVE in a `.net C#` application, there is no automatic way (in VS or nuget) to track down the inclusion path of the nuget introducing the vulnerability.
+**If you need to find a transitive nuget dependency in .net project by name and version you can use this approach.**
 
-After several hours of internet research without success I decided to write this. A powershell script + the same implementation in `python` as platform agonistic approach.
+If you are using `DependencyTrack` or a similar tools to find nugets with critical CVE in a `.net C#` application, there is no automatic way (in VS or nuget) to track down the inclusion path of the nuget introducing the vulnerability.
+
+After several hours of internet research without success I decided to write this. A powershell script + the same implementation in `python` as platform agnostic approach.
 
 # Prerequisite
 
