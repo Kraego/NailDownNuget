@@ -2,7 +2,7 @@ bin/
 obj/
 .ionide/
 project.lock.json
-*-tests.xml
+*-tests.xml 
 /debug/
 /staging/
 /Packages/
