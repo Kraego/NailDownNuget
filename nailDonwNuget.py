@@ -15,7 +15,6 @@ def find_nuget(path, currentElementName, currentElementVersion, nugetName, nuget
 
     if currentElementName == nugetName and currentElementVersion == nugetVersion:
         print('\n* Found: {}\n'.format(resultPath))
-        return
         
     if len(dependencies) == 0:
         return
