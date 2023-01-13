@@ -2,7 +2,7 @@
 
 **If you need to find a transitive nuget dependency in .net project by name and version you can use this approach.**
 
-If you are using `DependencyTrack` or a similar tools to find nugets with critical CVE in a `.net C#` application, there is no automatic way (in VS or nuget) to track down the inclusion path of the nuget introducing the vulnerability.
+If you are using `DependencyTrack` or a similar tool to find nugets with critical CVE in a `.net C#` application, there is no automatic way (in VS or nuget) to track down the inclusion path of the nuget introducing the vulnerability.
 
 After several hours of internet research without success I decided to write this. A powershell script + the same implementation in `python` as platform agnostic approach.
 
@@ -27,4 +27,4 @@ It calls `nuget-deps-tree` stores the resulting dependency tree. Then it tries t
 
 ## python
 
-* `py .\nailDonwNuget.py [path to sln], [name of the nuget], [version of the nuget]`
+* `py .\nailDownNuget.py [path to sln], [name of the nuget], [version of the nuget]`
