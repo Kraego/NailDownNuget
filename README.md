@@ -1,6 +1,6 @@
 # About
 
-**If you need to find a transitive nuget dependency in .net project by name and version you can use this approach.**
+**If you need to find a transitive nuget dependency in a .net project by name and version you can use this approach.**
 
 If you are using `DependencyTrack` or a similar tool to find nugets with critical CVE in a `.net C#` application, there is no automatic way (in VS or nuget) to track down the inclusion path of the nuget introducing the vulnerability.
 
